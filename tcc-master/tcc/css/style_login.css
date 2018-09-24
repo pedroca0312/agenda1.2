@@ -1,0 +1,76 @@
+ .btn-primary {
+     width: 400px;
+     height: 50px;
+ }
+
+ .form-control{
+     width: 400px;
+     height: 50px;
+
+ }
+
+ body{
+    background-image: url("../../imagens/calendario.png");
+    background-size: 100%;
+   
+ }
+
+      .suprema{
+          margin-left: 6%;
+          margin-right: 45%;
+          margin-top: 4%;
+      }
+
+ h1{
+     font-size: 60px;
+     margin-left: 23%;
+ }
+
+ #cadastro {
+     margin-left: 28%;
+     font-size: 20px;
+ }
+
+ #esqueceu_senha{
+     margin-left: 20%;
+     font-size: 20px;
+ }
+
+ h2{
+
+     font-size: 45px;
+ }
+
+
+
+ h3{
+     font-size: 35px;
+ }
+
+ img{
+     margin-left: 15%;
+     margin-bottom: 8%;
+     margin-top: 1%;
+     width: 300px;
+     height: 250px;
+
+ }
+
+ #descricao{
+     float: right;
+     margin-right: 1%;
+     margin-top: 20%;
+ }
+
+ .box{
+    border: solid;
+    margin-right: 50%;
+    width: 600px;
+    padding-left: 10%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    background-color: white;
+    border-radius: 10px;
+    border-color: white;
+ }
+
