@@ -55,7 +55,7 @@ class CrudAtividade
     public function cadastroAgenda(Atividade $atividade){
         $this->conexao = BDConection::getConexao();
 
-        $sql = "insert into atividade (descricao,data_previsao, id_turma) values ('".$atividade->getDescricao()."','".$atividade->getDataPrevisao()."')";
+        $sql = "insert into atividade (descricao,data_previsao, id_turma) values ('".$atividade->getDescricao()."','".$atividade->getDataPrevisao()."','".$_SESSION['id_turma']."')";
 
         $res = $this->conexao->query($sql);
     }
