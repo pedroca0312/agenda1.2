@@ -13,7 +13,7 @@ class Atividade
         $this->id_atividade = $id_atividade;
         $this->descricao = $descricao;
         $this->data_previsao = $data_previsao;
-        $this->id_turma = $_SESSION['id_turma'];
+       // $this->id_turma = $_SESSION['id_turma'];
         // $this->id_disciplina = $id_disciplina;
     }
    

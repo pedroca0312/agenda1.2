@@ -10,7 +10,7 @@
 <body>
 <form action="?acao=cadastrar" method="post">
 
-    <h1>Cadestre-se</h1>
+    <h1>Cadastre-se</h1>
 
     <div class="tudo">
 	<div id="nome">
@@ -42,6 +42,18 @@
 		<input class="form-control inputLogin" type="password" name="confirma_senha" placeholder="Confirmar Senha" > <br> <br>
 	
 	</div>
+
+        <div id="turma">
+
+            <select name="turma" id="turma"><?= foreach ($turmas as $turma): ?>
+
+                <option value="<?= $turma->?>"></option>
+            
+            
+            
+            </select><br> <br>
+
+        </div>
 
 	<div id="botao">
 		
