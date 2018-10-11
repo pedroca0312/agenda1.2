@@ -12,7 +12,7 @@
 
     <div id="descricao">
 
-        <h2> Plataforma de organização do estudante</h2> <br> <br>
+        <h2> Plataforma de Organização do Estudante</h2> <br> <br>
         <h3>O IF agenda é uma aplicação com intuito de auxiliar e facilitar<br>
             os estudantes na organização de seus trabalhos, atividades e provas<br>
             em uma plataforma de acesso fácil e rápido no seu dia-a-dia,<br>

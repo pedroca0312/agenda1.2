@@ -7,7 +7,7 @@
     <style type="text/css">@import url(../css/style_lista_atividade.css); </style>
 </head>
 <body>
-<h1>Lista de Atividades</h1>
+<h1>Lista de Usuarios</h1>
 <div class="lista_atividades">
     <?php foreach ($usuarios as $usuario): ?>
 
