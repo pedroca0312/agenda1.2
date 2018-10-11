@@ -15,15 +15,19 @@
    
  }
 
-      .suprema{
-          margin-left: 6%;
-          margin-right: 45%;
-          margin-top: 4%;
-      }
+ .suprema{
+     margin-left: 3%;
+     margin-right: 45%;
+     margin-top: 4%;
+ }
 
  h1{
      font-size: 60px;
-     margin-left: 23%;
+     margin-left: 21%;
+     font-family: "Courier New", Courier, monospace;
+     font-weight: bold;
+
+
  }
 
  #cadastro {
@@ -37,14 +41,20 @@
  }
 
  h2{
-
+     text-align: center;
      font-size: 45px;
+     font-family: "Courier New", Courier, monospace;
+     font-weight: bold;
  }
 
 
 
  h3{
-     font-size: 35px;
+     font-size: 28px;
+     text-align: center;
+     font-family: "Courier New", Courier, monospace;
+     color: black;
+
  }
 
  img{
@@ -58,8 +68,18 @@
 
  #descricao{
      float: right;
-     margin-right: 1%;
-     margin-top: 20%;
+     margin-right: 3%;
+     margin-top: 18%;
+     border: solid;
+     padding-top: 5%;
+     padding-bottom: 4%;
+     padding-left: 2%;
+     padding-right: 2%;
+     border-radius: 10px;
+     background-color: white;
+     border-color: #4e555b;
+     /*background: rgba(0, 0, 0, 0.35);*/
+
  }
 
  .box{
@@ -71,6 +91,8 @@
     padding-top: 3%;
     background-color: white;
     border-radius: 10px;
-    border-color: white;
+    border-color: #4e555b;
  }
+
+
 
