@@ -4,6 +4,9 @@ session_start();
 
 require_once '../Models/CrudUsuario.php';
 require_once '../Models/Usuario.php';
+require_once '../Models/Turma.php';
+require_once '../Models/CrudTurma.php';
+
 
 if (isset($_GET['acao'])){
     $acao = $_GET['acao'];
@@ -39,12 +42,14 @@ switch ($acao) {
         $crud = new CrudUsuario();
 
         if (isset($_GET)){
+            $crud1 = new CrudTurma();
+
+            $turmas=$crud1->GetTurmas();
             include '../views/cadastro.php';
         }
         if (isset($_POST['botao'])){
-            $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],Null,$_POST['usuario']);
+            $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],Null,$_POST['usuario'],$_POST['turma']);
         $crud->CadastrarUsuario($usuario);
-
         header('Location: usuario.php');
         }
 

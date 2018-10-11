@@ -7,15 +7,17 @@ class Usuario
     public $email;
     public $senha;
     public $id;
+    public $turma;
 
 
-    public function __construct($nome,$email,$senha,$id,$username)
+    public function __construct($nome,$email,$senha,$id,$username,$turma)
     {
         $this->nome = $nome;
         $this->email= $email;
         $this->senha= $senha;
         $this->id= $id;
         $this->username = $username;
+        $this->turma= $turma;
 
     }
 

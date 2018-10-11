@@ -45,11 +45,11 @@
 
         <div id="turma">
 
-            <select name="turma" id="turma"><?= foreach ($turmas as $turma): ?>
+            <select name="turma" id="turma"><?php foreach ($turmas as $turma): ?>
 
-                <option value="<?= $turma->?>"></option>
+                <option value="<?= $turma->getIdTurma()?>"><?= $turma->GetNome()?></option>
             
-            
+            <?php endforeach;?>
             
             </select><br> <br>
 
