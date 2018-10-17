@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 03/08/2018 às 11:04
--- Versão do servidor: 5.7.21-0ubuntu0.16.04.1
--- Versão do PHP: 7.0.22-0ubuntu0.16.04.1
+-- Generation Time: Oct 17, 2018 at 02:12 PM
+-- Server version: 5.7.21-0ubuntu0.16.04.1
+-- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `agendinha`
+-- Database: `agendinha`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `aluno_turma`
+-- Table structure for table `aluno_turma`
 --
 
 CREATE TABLE `aluno_turma` (
@@ -37,7 +37,7 @@ CREATE TABLE `aluno_turma` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `area_formacao`
+-- Table structure for table `area_formacao`
 --
 
 CREATE TABLE `area_formacao` (
@@ -48,7 +48,7 @@ CREATE TABLE `area_formacao` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `atividade`
+-- Table structure for table `atividade`
 --
 
 CREATE TABLE `atividade` (
@@ -61,16 +61,31 @@ CREATE TABLE `atividade` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `atividade`
+-- Dumping data for table `atividade`
 --
 
 INSERT INTO `atividade` (`id_atividade`, `descricao`, `data_cadastro`, `data_previsao`, `id_turma`, `id_disciplina`) VALUES
-(1, 'pimpa', '2018-08-03', '2018-08-22', NULL, NULL);
+(1, 'pppppp', NULL, '2018-08-04', 1, NULL),
+(2, 'pppp', NULL, '2018-10-04', 1, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `curso`
+-- Table structure for table `comentario`
+--
+
+CREATE TABLE `comentario` (
+  `data_hora` date DEFAULT NULL,
+  `id_comentario` int(11) NOT NULL,
+  `comentario` varchar(80) DEFAULT NULL,
+  `id_usuario` int(11) DEFAULT NULL,
+  `id_atividade` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `curso`
 --
 
 CREATE TABLE `curso` (
@@ -81,7 +96,7 @@ CREATE TABLE `curso` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `disciplina`
+-- Table structure for table `disciplina`
 --
 
 CREATE TABLE `disciplina` (
@@ -92,7 +107,7 @@ CREATE TABLE `disciplina` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `disciplinas_curso`
+-- Table structure for table `disciplinas_curso`
 --
 
 CREATE TABLE `disciplinas_curso` (
@@ -103,7 +118,7 @@ CREATE TABLE `disciplinas_curso` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `docentes_turma`
+-- Table structure for table `docentes_turma`
 --
 
 CREATE TABLE `docentes_turma` (
@@ -114,7 +129,7 @@ CREATE TABLE `docentes_turma` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tipo_usuario`
+-- Table structure for table `tipo_usuario`
 --
 
 CREATE TABLE `tipo_usuario` (
@@ -125,7 +140,7 @@ CREATE TABLE `tipo_usuario` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `turma`
+-- Table structure for table `turma`
 --
 
 CREATE TABLE `turma` (
@@ -135,149 +150,208 @@ CREATE TABLE `turma` (
   `id_curso` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `turma`
+--
+
+INSERT INTO `turma` (`ano`, `nome`, `id_turma`, `id_curso`) VALUES
+('2016', '3info3', 1, NULL),
+('2016', '3info2', 2, NULL),
+('2016', '3info1', 3, NULL),
+('2017', '2info1', 4, NULL),
+('2017', '2info2', 5, NULL),
+('2017', '2info3', 6, NULL),
+('2018', '1info1', 7, NULL),
+('2018', '1info2', 8, NULL),
+('2018', '1info3', 9, NULL);
+
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Table structure for table `usuario`
 --
 
 CREATE TABLE `usuario` (
-  `username` varchar(30) DEFAULT NULL,
+  `username` varchar(50) DEFAULT NULL,
   `nome` varchar(50) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
   `senha` varchar(20) DEFAULT NULL,
-  `id_usuario` int(11) NOT NULL
+  `id_usuario` int(11) NOT NULL,
+  `num_matricula` int(11) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `id_area` int(11) DEFAULT NULL,
+  `id_tipo_usuario` int(11) DEFAULT NULL,
+  `id_turma` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `usuario`
+-- Dumping data for table `usuario`
 --
 
-INSERT INTO `usuario` (`username`, `nome`, `email`, `senha`, `id_usuario`) VALUES
-('admin', NULL, NULL, 'admin', 3),
-('pedro', 'pedro', 'pedro@pedro', 'pedro', 6);
+INSERT INTO `usuario` (`username`, `nome`, `senha`, `id_usuario`, `num_matricula`, `email`, `id_area`, `id_tipo_usuario`, `id_turma`) VALUES
+('pedro', 'pedro', 'pedro', 1, NULL, 'pedro@pedro', NULL, NULL, 0),
+('daniboy', 'Daniel Filho', 'daniel', 2, NULL, 'daniel@daniel.com', NULL, NULL, 0),
+('heitor', 'heitor', 'heitor', 4, NULL, 'heitor@heior', NULL, NULL, 1);
 
 --
--- Índices de tabelas apagadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices de tabela `aluno_turma`
+-- Indexes for table `aluno_turma`
 --
 ALTER TABLE `aluno_turma`
   ADD KEY `id_turma` (`id_turma`),
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Índices de tabela `area_formacao`
+-- Indexes for table `area_formacao`
 --
 ALTER TABLE `area_formacao`
   ADD PRIMARY KEY (`id_area`);
 
 --
--- Índices de tabela `atividade`
+-- Indexes for table `atividade`
 --
 ALTER TABLE `atividade`
-  ADD PRIMARY KEY (`id_atividade`),
-  ADD KEY `id_turma` (`id_turma`),
-  ADD KEY `id_disciplina` (`id_disciplina`);
+  ADD PRIMARY KEY (`id_atividade`);
 
 --
--- Índices de tabela `curso`
+-- Indexes for table `comentario`
+--
+ALTER TABLE `comentario`
+  ADD PRIMARY KEY (`id_comentario`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_atividade` (`id_atividade`);
+
+--
+-- Indexes for table `curso`
 --
 ALTER TABLE `curso`
   ADD PRIMARY KEY (`id_curso`);
 
 --
--- Índices de tabela `disciplina`
+-- Indexes for table `disciplina`
 --
 ALTER TABLE `disciplina`
   ADD PRIMARY KEY (`id_disciplina`);
 
 --
--- Índices de tabela `disciplinas_curso`
+-- Indexes for table `disciplinas_curso`
 --
 ALTER TABLE `disciplinas_curso`
   ADD KEY `id_disciplina` (`id_disciplina`),
   ADD KEY `id_curso` (`id_curso`);
 
 --
--- Índices de tabela `docentes_turma`
+-- Indexes for table `docentes_turma`
 --
 ALTER TABLE `docentes_turma`
   ADD KEY `id_usuario` (`id_usuario`),
   ADD KEY `id_turma` (`id_turma`);
 
 --
--- Índices de tabela `tipo_usuario`
+-- Indexes for table `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
   ADD PRIMARY KEY (`id_tipo_usuario`);
 
 --
--- Índices de tabela `turma`
+-- Indexes for table `turma`
 --
 ALTER TABLE `turma`
-  ADD PRIMARY KEY (`id_turma`),
-  ADD KEY `id_curso` (`id_curso`);
+  ADD PRIMARY KEY (`id_turma`);
 
 --
--- Índices de tabela `usuario`
+-- Indexes for table `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id_usuario`);
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD KEY `id_area` (`id_area`),
+  ADD KEY `id_tipo_usuario` (`id_tipo_usuario`),
+  ADD KEY `turma` (`id_turma`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `atividade`
+-- AUTO_INCREMENT for table `area_formacao`
+--
+ALTER TABLE `area_formacao`
+  MODIFY `id_area` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `atividade`
 --
 ALTER TABLE `atividade`
-  MODIFY `id_atividade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_atividade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT for table `comentario`
+--
+ALTER TABLE `comentario`
+  MODIFY `id_comentario` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `curso`
+--
+ALTER TABLE `curso`
+  MODIFY `id_curso` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `disciplina`
+--
+ALTER TABLE `disciplina`
+  MODIFY `id_disciplina` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tipo_usuario`
+--
+ALTER TABLE `tipo_usuario`
+  MODIFY `id_tipo_usuario` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `turma`
+--
+ALTER TABLE `turma`
+  MODIFY `id_turma` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- Restrições para dumps de tabelas
+-- Constraints for dumped tables
 --
 
 --
--- Restrições para tabelas `aluno_turma`
+-- Constraints for table `aluno_turma`
 --
 ALTER TABLE `aluno_turma`
   ADD CONSTRAINT `aluno_turma_ibfk_1` FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id_turma`),
   ADD CONSTRAINT `aluno_turma_ibfk_2` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
 
 --
--- Restrições para tabelas `atividade`
+-- Constraints for table `comentario`
 --
-ALTER TABLE `atividade`
-  ADD CONSTRAINT `atividade_ibfk_1` FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id_turma`),
-  ADD CONSTRAINT `atividade_ibfk_2` FOREIGN KEY (`id_disciplina`) REFERENCES `disciplina` (`id_disciplina`);
+ALTER TABLE `comentario`
+  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_atividade`) REFERENCES `atividade` (`id_atividade`);
 
 --
--- Restrições para tabelas `disciplinas_curso`
+-- Constraints for table `disciplinas_curso`
 --
 ALTER TABLE `disciplinas_curso`
   ADD CONSTRAINT `disciplinas_curso_ibfk_1` FOREIGN KEY (`id_disciplina`) REFERENCES `disciplina` (`id_disciplina`),
   ADD CONSTRAINT `disciplinas_curso_ibfk_2` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`);
 
 --
--- Restrições para tabelas `docentes_turma`
+-- Constraints for table `docentes_turma`
 --
 ALTER TABLE `docentes_turma`
   ADD CONSTRAINT `docentes_turma_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
   ADD CONSTRAINT `docentes_turma_ibfk_2` FOREIGN KEY (`id_turma`) REFERENCES `turma` (`id_turma`);
 
 --
--- Restrições para tabelas `turma`
+-- Constraints for table `usuario`
 --
-ALTER TABLE `turma`
-  ADD CONSTRAINT `turma_ibfk_1` FOREIGN KEY (`id_curso`) REFERENCES `curso` (`id_curso`);
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_area`) REFERENCES `area_formacao` (`id_area`),
+  ADD CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`id_tipo_usuario`) REFERENCES `tipo_usuario` (`id_tipo_usuario`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
