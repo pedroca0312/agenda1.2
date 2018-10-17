@@ -24,10 +24,10 @@ switch ($acao) {
                 if ($_POST['usuario'] == $usuario->username and $_POST['senha'] == $usuario->senha) {
 
                     $_SESSION['username']  = $usuario->username;
-                    $_SESSION['id_turma'] = 1;//$usuario->username; (contexto)
+                    $_SESSION['id_turma'] = $usuario->turma;
                     $_SESSION['esta_logado'] = true;
-
-                    header('Location: ../fullcalendar-3.9.0/index.php');
+print_r($_SESSION['id_turma']);
+//                    header('Location: ../fullcalendar-3.9.0/index.php');
                 }
             }
         } else {
@@ -49,7 +49,8 @@ switch ($acao) {
         }
         if (isset($_POST['botao'])){
             $usuario = new Usuario($_POST['nome'],$_POST['email'],$_POST['senha'],Null,$_POST['usuario'],$_POST['turma']);
-        $crud->CadastrarUsuario($usuario);
+        $res =  $crud->CadastrarUsuario($usuario);
+
         header('Location: usuario.php');
         }
 

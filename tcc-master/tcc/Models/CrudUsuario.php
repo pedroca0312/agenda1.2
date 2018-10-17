@@ -19,7 +19,7 @@ class CrudUsuario
         
         $usuarios = $res->fetchAll(PDO::FETCH_ASSOC);
         foreach ($usuarios as $usuario){
-            $usu[] = new Usuario($usuario['nome'], $usuario['email'], $usuario['senha'],$usuario['id_usuario'], $usuario['username']);
+            $usu[] = new Usuario($usuario['nome'], $usuario['email'], $usuario['senha'],$usuario['id_usuario'], $usuario['username'],$usuario['turma']);
         }
         return $usu;
 
@@ -39,7 +39,7 @@ class CrudUsuario
     $usuario= $res->fetch(PDO::FETCH_ASSOC);
 
 
-    $usu = new Usuario($usuario['nome'], $usuario['email'],$usuario['senha'],$usuario['id_usuario'],$usuario['username']);
+    $usu = new Usuario($usuario['nome'], $usuario['email'],$usuario['senha'],$usuario['id_usuario'],$usuario['username'],$usuario['turma']);
     return $usu;
 
 }
@@ -55,9 +55,11 @@ class CrudUsuario
 
 
 
-        $sql = "insert into usuario (nome,email,senha,username,turma) values ('".$usu[0]."','".$usu[1]."','".$usu[2]."','".$usu[3]."','".$usu[4]."')";
+        $sql = "insert into usuario (nome,email,senha,username,id_turma) values ('".$usu[0]."','".$usu[1]."','".$usu[2]."','".$usu[3]."',".$usu[4].")";
 
         $res = $this->conexao->query($sql);
+
+        return $res;
 
     }
 
@@ -87,3 +89,9 @@ class CrudUsuario
         $res = $this->conexao->query($sql);
     }
 }
+//
+//$crud = new CrudUsuario();
+//
+//$usu = new Usuario('heitor', 'h@h.com','123',null,'heitor',1);
+//
+//echo $crud->CadastrarUsuario($usu);
