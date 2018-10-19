@@ -4,7 +4,7 @@
 
 </head>
 <body>
-<h1>Selecione sua turma</h1>
+<h1>Selecione sua turma (47 turmas)</h1>
 <div id="turmas">
     <img src="../../imagens/imagens/logo-1.png">
     <h2>3info3</h2>
