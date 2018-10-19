@@ -1,3 +1,5 @@
+
+
 <html>
     <meta charset="utf-8">
     <meta lang="pt-BR">
@@ -62,34 +64,37 @@
     
     <style>
         #calendario{
-            position: relative;
+            position: absolute;
             width: 70%;
-            margin: 0px auto;
-        }
-
-        #CadastrarAtividade{
+            margin-top: 0px;
+            margin-left:  20%;*/
 
         }
+        /*#direita{*/
+
+            /*margin-left:30%;*/
+        /*}*/
+        /*#esquerda{*/
+            /*margin-right: 70%;*/
+        /*}*/
+
+
     </style>
     
 </head>
 <body>
+
+<div id="direita" class="direita-calendar">
     <div id='calendario'></div>
+</div>
+<div id="esquerda" class="esquerda-cabecalho">
+    <?php include "../views/cabecalho.php";?>
+</div>
+
     
-        <div id=CadastrarAtividade>
-            <a href="../controlador/atividade.php?acao=cadastrar"><button name="Cadastrar" type="submit" class="btn btn-primary btn-lg">Cadastrar Atividade</button></a>
-            <br> <br>
 
-    <div id=CadastrarAtividade>
-        <a href="../controlador/atividade.php?acao=listar"><button name="Lista" type="submit" class="btn btn-primary btn-lg">Lista de Atividades</button></a>
-        <br> <br>
-    </div>
-
-            <div id=CadastrarAtividade>
-                <a href="../controlador/usuario.php?acao=listar"><button name="ListaUsuario" type="submit" class="btn btn-primary btn-lg">Lista de Usuario</button></a>
-                <br> <br>
-            </div>
-     
 </body>
 </html>
+
+
 

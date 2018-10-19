@@ -71,7 +71,10 @@ class Usuario
         $this->username = $username;
     }
 
-
+    public function getTurma()
+    {
+        return $this->turma;
+    }
 
 }
 

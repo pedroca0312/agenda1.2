@@ -26,8 +26,8 @@ switch ($acao) {
                     $_SESSION['username']  = $usuario->username;
                     $_SESSION['id_turma'] = $usuario->turma;
                     $_SESSION['esta_logado'] = true;
-print_r($_SESSION['id_turma']);
-//                    header('Location: ../fullcalendar-3.9.0/index.php');
+//print_r($_SESSION['id_turma']);
+                    header('Location: ../fullcalendar-3.9.0/index.php');
                 }
             }
         } else {

@@ -19,7 +19,7 @@ class CrudUsuario
         
         $usuarios = $res->fetchAll(PDO::FETCH_ASSOC);
         foreach ($usuarios as $usuario){
-            $usu[] = new Usuario($usuario['nome'], $usuario['email'], $usuario['senha'],$usuario['id_usuario'], $usuario['username'],$usuario['turma']);
+            $usu[] = new Usuario($usuario['nome'], $usuario['email'], $usuario['senha'],$usuario['id_usuario'], $usuario['username'],$usuario['id_turma']);
         }
         return $usu;
 
@@ -39,7 +39,7 @@ class CrudUsuario
     $usuario= $res->fetch(PDO::FETCH_ASSOC);
 
 
-    $usu = new Usuario($usuario['nome'], $usuario['email'],$usuario['senha'],$usuario['id_usuario'],$usuario['username'],$usuario['turma']);
+    $usu = new Usuario($usuario['nome'], $usuario['email'],$usuario['senha'],$usuario['id_usuario'],$usuario['username'],$usuario['id_turma']);
     return $usu;
 
 }

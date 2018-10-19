@@ -6,10 +6,10 @@
 
 </head>
 <body>
-<div class="tudo" </div>
+<div class="tudo">
 <img src="../../imagens/imagens/logo-1.png"> <br> <br>
 
-<h2>Nome: <br><br> Turma:</h2> <br><br>
+<h2><?php $_SESSION['username'] ?> <br><br> Turma:</h2> <br><br>
 
 <div id=CadastrarAtividade>
     <a href="../controlador/atividade.php?acao=cadastrar"><button name="Cadastrar" type="submit" class="btn btn-primary btn-lg">Cadastrar Atividade</button></a>
@@ -24,5 +24,6 @@
         <a href="../controlador/usuario.php?acao=listar"><button name="ListaUsuario" type="submit" class="btn btn-primary btn-lg">Lista de Usuario</button></a>
         <br> <br>
     </div>
+</div>
 </div>
 </body>

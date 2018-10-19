@@ -13,6 +13,7 @@
         $eventoFormatado = [
             "title" => $evento->descricao,
             "start" => date($evento->data_previsao),
+            //"url" => "../views/sucesso.php"
 
         ];
 
