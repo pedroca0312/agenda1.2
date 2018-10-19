@@ -1,20 +1,31 @@
 #turmas{
     border: solid;
-    padding-bottom: 0.1%;
-    padding-left: ;
+    margin-right: 85%;
+    margin-left: 1%;
+    border-radius: 10px;
+
 }
 
 img{
-    margin-bottom: 8%;
-    margin-top: 1%;
-    width: 300px;
-    height: 250px;
+    width: 200px;
+    height: 150px;
+    margin-left: 12%;
+    padding-top: 8%;
 
 }
 
 h2{
-    float: right;
     margin-right: 70%;
-    margin-top: 6%;
-    font-size: 80px;
+    font-size: 60px;
+    margin-left: 12%;
+    font-family: "Courier New", Courier, monospace;
+
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 2%;
+    margin-left: 1%;
+    font-family: "Courier New", Courier, monospace;
+
 }
