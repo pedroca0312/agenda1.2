@@ -1,6 +1,14 @@
 .btn-primary{
     width: 400px;
     height: 50px;
+    background-color: #34ce57;
+    border-color: #34ce57;
+}
+
+.btn-primary:hover{
+    background-color: #8fdf82;
+    border-color: #8fdf82;
+
 }
 
 .form-control{
@@ -29,3 +37,8 @@ h1{
     color: black;
 
 }
+
+body{
+    background-color: palegoldenrod;
+}
+
