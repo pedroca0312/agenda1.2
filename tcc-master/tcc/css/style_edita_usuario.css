@@ -1,0 +1,45 @@
+.form-control{
+    width: 400px;
+    height: 50px;
+}
+
+.btn-lg{
+    width: 400px;
+    height: 50px;
+}
+
+.formularios {
+    margin-left: 38%;
+    padding-top: 3%;
+    border: solid;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 3%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: white;
+    border-radius: 10px;
+    padding-bottom: 3%;
+    font-family: "Courier New";
+}
+h1 {
+    font-family: "Courier New";
+    text-align: center;
+    color: black;
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+.btn-primary{
+    background-color: #34ce57;
+    border-color: #34ce57;
+}
+
+.btn-primary:hover{
+    background-color: #8fdf82;
+    border-color: #8fdf82;
+}
+
+body{
+    background-color: palegoldenrod;
+}

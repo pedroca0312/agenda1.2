@@ -1,7 +1,16 @@
 	.btn-primary{
 		width: 400px;
 		height: 50px;
+		background-color: #34ce57;
+        border-color: #34ce57;
  	}
+
+ 	.btn-primary:hover{
+    	background-color: #8fdf82;
+    	border-color: #8fdf82;
+
+	}
+
 
 	.form-control{
 		width: 400px;
@@ -9,36 +18,46 @@
 	}
 
 	.tudo{
-		margin-left: 37%;
-		padding-top: 0.5%;
+		padding-top: 2%;
 		border: solid;
 		margin-left: 35%;
 		margin-right: 35%;
-		margin-top: 7%;
 		padding-right: 5%;
 		padding-left: 5%;
 		background-color: white;
 		border-radius: 10px;
-		border-color: #4e555b;
+		border-color: black;
 		padding-bottom: 2%;
-
+		margin-top: 7%;
+		font-family: "Courier New", Courier, monospace;
 	}
 
 	h1 {
 		color: black;
-		margin-top: 8%;
-		margin-bottom: 8%;
-		margin-left: 20%;
-		padding-bottom: 5%;
+		margin-top: 6%;
+		margin-left: 15%;
+		padding-bottom: 10%;
 		font-family: "Courier New", Courier, monospace;
+		font-weight: bold;
 
 	}
 
 	body{
-		background-color: grey;
+		background-color: palegoldenrod;
 	}
 
-	.form-control placeholder{
-		font-family: "Courier New", Courier, monospace;
 
+	.btn-secondary{
+		background-color: #34ce57;
+		border-color: #34ce57;
 	}
+
+	.btn-secondary:hover{
+		background-color: #34ce57;
+		border-color: #34ce57;
+	}
+
+
+
+
+

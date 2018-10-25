@@ -1,7 +1,14 @@
  .btn-primary {
      width: 400px;
      height: 50px;
+     background-color: #34ce57;
+     border-color: #34ce57;
  }
+
+.btn-primary:hover{
+    background-color: #8fdf82;
+    border-color: #8fdf82;
+}
 
  .form-control{
      width: 400px;
@@ -78,7 +85,6 @@
      padding-right: 2%;
      border-radius: 10px;
      background-color: white;
-     border-color: #4e555b;
      /*background: rgba(0, 0, 0, 0.35);*/
 
  }
@@ -92,7 +98,8 @@
     padding-top: 3%;
     background-color: white;
     border-radius: 10px;
-    border-color: #4e555b;
+    font-family: "Courier New", Courier, monospace;
+
  }
 
 
