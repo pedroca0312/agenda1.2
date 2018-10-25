@@ -4,9 +4,10 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.0-dist/css/bootstrap-grid.min.css">
     <script type="text/javascript" src="../bootstrap-4.1.0-dist/js/bootstrap.bundle.min.js"></script>
 
-    <style type="text/css">@import url(../css/style_editar.css); </style>
+    <style type="text/css">@import url(../css/style_edita_atividade.css); </style>
 </head>
     <body>
+    <h1>Editar Atividade</h1>
     <form method="post" action="" class="formularios">
 
         <input class="form-control inputLogin" name="descricao" type="text" value="<?= $atividade->getDescricao();?>"><br> <br>

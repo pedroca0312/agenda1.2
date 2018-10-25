@@ -10,9 +10,11 @@
 <body>
 <form action="?acao=cadastrar" method="post">
 
-    <h1>Cadastre-se</h1>
+    
 
     <div class="tudo">
+    <h1>Cadastre-se</h1>
+
 	<div id="nome">
 		
 		<input class="form-control inputLogin" type="text" name="nome" placeholder="Nome Completo" > <br> <br>
@@ -45,13 +47,13 @@
 
         <div id="turma">
 
-            <select name="turma" id="turma"><?php foreach ($turmas as $turma): ?>
+            <select  class="btn btn-secondary dropdown-toggle" name="turma" id="turma"><?php foreach ($turmas as $turma): ?>
 
                 <option value="<?= $turma->getIdTurma()?>"><?= $turma->GetNome()?></option>
             
             <?php endforeach;?>
             
-            </select><br> <br>
+            </select> <br> <br> <br>
 
         </div>
 

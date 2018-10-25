@@ -19,8 +19,6 @@
 </head>
 <body>
 
-<h1>bem vindo <?= $_SESSION['username'] ?></h1>
-
 <form action="" method="post">
 
     <div class="tudo">
