@@ -8,6 +8,8 @@ require_once '../Models/Turma.php';
 require_once '../Models/CrudTurma.php';
 
 
+
+
 if (isset($_GET['acao'])){
     $acao = $_GET['acao'];
 }else{
@@ -16,7 +18,7 @@ if (isset($_GET['acao'])){
 
 switch ($acao) {
     case 'verifica':
-
+        $crud2 = new CrudTurma();
         $crud = new CrudUsuario();
         if (isset($_POST['gravar'])) {
             $usuarios = $crud->GetUsuarios();
@@ -25,8 +27,10 @@ switch ($acao) {
 
                     $_SESSION['username']  = $usuario->username;
                     $_SESSION['id_turma'] = $usuario->turma;
+                    $turma = $crud2->GetTurma($_SESSION['id_turma']);
+                    $_SESSION['nome_turma'] = $turma->nome;
                     $_SESSION['esta_logado'] = true;
-//print_r($_SESSION['id_turma']);
+//print_r($_SESSION['nome_turma']);
                     header('Location: ../fullcalendar-3.9.0/index.php');
                 }
             }

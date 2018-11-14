@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+
+?>
+
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../bootstrap-4.1.0-dist/css/bootstrap-grid.min.css">
@@ -10,7 +16,7 @@
 <br>
 <img src="../../imagens/imagens/logo-1.png"> <br> <br>
 <br>
-<h2>Turma: <br><br>Nome: <br><br></h2>
+<h2>Turma:<?= $_SESSION['nome_turma'];?> <br><br>Nome:<?=$_SESSION['username'];?> <br><br></h2>
 
 <div id=CadastrarAtividade>
     <a href="../controlador/atividade.php?acao=cadastrar"><button name="Cadastrar" type="submit" class="btn btn-secondary btn-lg">Cadastrar Atividade</button></a>

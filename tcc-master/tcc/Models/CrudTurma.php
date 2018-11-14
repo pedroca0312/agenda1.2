@@ -32,14 +32,14 @@ class CrudTurma
 
         $this->conexao = BDConection::getConexao();
 
-        $sql = "select * from turmas where id_turma=".$id_turma;
+        $sql = "select * from turma where id_turma=".$id_turma;
 
         $res = $this->conexao->query($sql);
 
         $turma= $res->fetch(PDO::FETCH_ASSOC);
 
 
-        $turm[] = new Turma($turma['ano'], $turma['nome'],$turma['id_turma'], $turma['id_curso']);
+        $turm = new Turma($turma['ano'], $turma['nome'],$turma['id_turma'], $turma['id_curso']);
 
         return $turm;
 

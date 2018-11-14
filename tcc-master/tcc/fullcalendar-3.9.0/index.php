@@ -37,7 +37,7 @@
                 eventLimit: true, 
                 events: 'eventos.php',           
                 eventColor: '#324edd',
-                defaultView: 'listDay',
+                defaultView: 'month',
                 themeSystem: 'bootstrap4',
                 themeName: 'cyborg'
 
