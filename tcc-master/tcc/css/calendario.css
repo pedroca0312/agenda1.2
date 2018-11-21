@@ -6,8 +6,40 @@ table {
     background: yellow;
 }
 
-button.fc-next-button.btn.btn-primary {
+button.fc-next-button.btn.btn-primary:hover {
+    background: ;
+    border: ;
+}
 
-    background: red;
+button.fc-prev-button.btn.btn-primary:hover {
+    background: ;
+    border: ;
 
 }
+
+button.fc-next-button.btn.btn-primary {
+    background: #34ce57;
+    border: #34ce57;
+}
+
+button.fc-prev-button.btn.btn-primary {
+    background: #34ce57;
+    border: #34ce57;
+
+}
+
+button.fc-today-button.btn.btn-primary {
+    background: #34ce57;
+    border: #34ce57;
+}
+
+button.fc-month-button.btn.btn-primary{
+    background: #34ce57;
+    border: #34ce57;
+}
+
+button.fc-agendaweek-button.btn.btn-primary {
+
+
+
+
