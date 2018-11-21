@@ -17,9 +17,9 @@
  }
 
  body{
-    background-image: url("../../imagens/calendario.png");
-    background-size: 100%;
-   
+     background-image: url("../../imagens/calendario.png");
+     background-size: 100%;
+     background-attachment:fixed
  }
 
  .suprema{
@@ -104,3 +104,59 @@
 
 
 
+ @media screen and (max-width: 980px) {
+
+     .box {
+         border: solid;
+         margin-right: 50%;
+         width: 170%;
+         padding-left: 15%;
+         padding-bottom: 3%;
+         padding-top: 3%;
+         background-color: white;
+         border-radius: 10px;
+         font-family: "Courier New", Courier, monospace;
+
+     }
+
+     .form-control {
+         width: 90%;
+         height: 5%
+     }
+
+     img {
+         margin-left: 60%;
+         margin-bottom: 8%;
+         margin-top: 1%;
+         width: 60%;
+         height: 25%;
+     }
+
+     .btn-primary {
+         width: 90%;
+         height: 8%;
+         background-color: #34ce57;
+         border-color: #34ce57;
+     }
+
+     #cadastro {
+         margin-left: 28%;
+         font-size: 120%;
+     }
+
+     #esqueceu_senha {
+         margin-left: 15%;
+         font-size: 120%;
+     }
+
+     #descricao {
+         display: none;
+
+     }
+
+     body {
+         background-image: url("../../imagens/calendario.png");
+         background-size: 100%;
+         background-attachment: fixed
+     }
+ }
