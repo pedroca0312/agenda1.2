@@ -40,6 +40,41 @@ h1 {
     border-color: #8fdf82;
 }
 
-body{
-    background-color: palegoldenrod;
+body {
+    background-image: url("../../imagens/calendario.png");
+    background-size: 100%;
+    background-attachment: fixed
+}
+
+@media screen and (max-width: 980px) {
+
+    .formularios {
+        padding-top: 4%;
+        border: solid;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 3%;
+        padding-right: 3%;
+        padding-left: 3%;
+        background-color: white;
+        border-radius: 10px;
+        padding-bottom: 3%;
+        font-family: "Courier New";
+    }
+
+    .form-control{
+        width: 100%;
+        height: 7%;
+    }
+    .btn-lg{
+        width: 100%;
+        height: 7%;
+    }
+    h1 {
+         font-family: "Courier New";
+         text-align: center;
+         color: black;
+         margin-top:30%;
+         font-weight: bold;
+     }
 }

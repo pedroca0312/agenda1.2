@@ -3,17 +3,17 @@ body {
 }
 
 table {
-    background: yellow;
+    background: white;
 }
 
 button.fc-next-button.btn.btn-primary:hover {
-    background: ;
-    border: ;
+    background: #1e6500;
+    border:#34ce57;
 }
 
 button.fc-prev-button.btn.btn-primary:hover {
-    background: ;
-    border: ;
+    background:#1e6500;
+    border:#34ce57;
 
 }
 
@@ -33,12 +33,36 @@ button.fc-today-button.btn.btn-primary {
     border: #34ce57;
 }
 
+button.fc-today-button.btn.btn-primary:hover {
+    background: #1e6500;
+    border: #34ce57;
+}
+
 button.fc-month-button.btn.btn-primary{
     background: #34ce57;
     border: #34ce57;
 }
+button.fc-month-button.btn.btn-primary.active{
+    background: #1e6500;
+    border: #34ce57;
+}
 
 button.fc-agendaweek-button.btn.btn-primary {
+}
+
+button.fc-listWeek-button.btn.btn-primary{
+    background: #34ce57;
+    border: #34ce57;
+}
+button.fc-listWeek-button.btn.btn-primary:hover{
+    background: #1e6500;
+    border: #34ce57;
+}
+button.fc-listWeek-button.btn.btn-primary.active{
+    background: #1e6500;
+    border: #34ce57;
+}
+
 
 
 
